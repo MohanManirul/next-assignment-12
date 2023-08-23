@@ -7,27 +7,27 @@ const page = () => {
             <section>
                 <form className="add-form">                  
                     <div className="mb-3">
-                        <label for="name" className="float-start">Name</label>
+                        <label htmlFor="name" className="float-start">Name</label>
                         <input type="text" className="form-control"  placeholder="enter your name" />
                     </div>
 
                     <div className="mb-3">
-                        <label for="email" className="float-start">Email address</label>
+                        <label htmlFor="email" className="float-start">Email address</label>
                         <input type="email" className="form-control"  placeholder="name@example.com" />
                     </div>
 
                     <div className="mb-3">
-                        <label for="website" className="float-start">Website</label>
+                        <label htmlFor="website" className="float-start">Website</label>
                         <input type="text" className="form-control"  placeholder="enter your website" />
                     </div>
 
                     <div className="mb-3">
-                        <label for="email" className="float-start">Email address</label>
+                        <label htmlFor="email" className="float-start">Email address</label>
                         <input type="email" className="form-control"  placeholder="name@example.com" />
                     </div>
 
                     <div className="mb-3">
-                        <label for="message" className="float-start">Example textarea</label>
+                        <label htmlFor="message" className="float-start">Example textarea</label>
                         <textarea className="form-control" rows="3"></textarea>
                     </div>
 
