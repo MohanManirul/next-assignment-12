@@ -3,7 +3,7 @@ const nextConfig = {
     distDir: 'build',
     async headers(){
         return [
-            {
+            { 
                 source:"/:path*",
                 headers:[
                     {
