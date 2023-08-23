@@ -29,8 +29,7 @@ export default  function Blog(){
                                                         
                               <p>{post.id} - {post.title }</p>  
                                
-                           </Link>
-                            
+                           </Link>                            
                                                       
                         )
                     )  

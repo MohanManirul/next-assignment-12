@@ -1,24 +1,28 @@
-import Comments from "@/app/components/comments";
-import getSinglePostComments from "@/app/lib/getPostComments";
+"use client"
 import getSinglePost from "@/app/lib/getSinglePost";
-import { Suspense } from "react";
+import { useEffect, useState } from "react";
 
-export default async function SingleBlog({ params }) {
+export default function SingleBlog({ params }) {
   const id = params.id;
-  const post = await getSinglePost(id);
-  const commentsPromise = await getSinglePostComments(id);
+ 
 
   //request in parallel
   // const [post,comments] = await Promise.all([postPromise,commentsPromise]);
 
+
+  const [list , setList] = useState(null);
+  useEffect(()=> {
+      (async()=> {
+        const post = await getSinglePost(id);
+    
+          setList(post.postDetails);
+      })()
+  },[id])
+
   return (
     <div className="blogContent">
       <section>
-        <h2>{post.title}</h2>
-        <div className="card mt-4">{post.body}</div>
-        <Suspense fallback={<h2>Loading comments...</h2>}>
-          <Comments commentsPromise ={commentsPromise}/>
-        </Suspense>
+        <h2>{list?.title}</h2>
       </section>
     </div>
   );

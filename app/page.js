@@ -21,7 +21,7 @@ export default function Home() {
     <div className="row">
         <section>
                 <section className='sectionOne'>
-                    <h2>Hme page section One</h2>
+                    <h2>Home page section One</h2>
                 </section>
                 <div className="mt-4 sectionTwo">
                     <p>Section Two blog items</p>
