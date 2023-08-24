@@ -20,10 +20,12 @@ export default function SingleBlog({ params }) {
   },[id])
 
   return (
-    <div className="blogContent">
-      <section>
+    <div className="row blogContent">
+    
         <h2>{list?.title}</h2>
-      </section>
+        <figure><img className="imgWidth"  src={list?.['img']} /></figure>
+        <p>{list?.content}</p>
+     
     </div>
   );
 }
