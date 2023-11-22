@@ -18,12 +18,6 @@ export default function Home() {
 
   return (
     <>
-            <div className="row">
-                <p>test section one</p>
-            </div>
-            <div className="row">
-                <p>test section two</p>
-            </div>
         <div className="row">
             <b className="text-center">Blog List</b>
                 {
